@@ -2,12 +2,10 @@
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('beds', table => {
         table.uuid('id').primary()
-        table.integer('city').notNull()
+        table.integer('id_city').notNull()
+        table.integer('id_hospital').notNull()
         table.integer('sala').notNull()
-        table.integer('country').notNull()
         table.string('ala',50).notNull()
-        table.string('latitude',12).defaultTo(0)
-        table.string('longitude',12).defaultTo(0)
         table.integer('isolation').defaultTo(0)
         table.integer('equipments').defaultTo(0)
         table.timestamps()
