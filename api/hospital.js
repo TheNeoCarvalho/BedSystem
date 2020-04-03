@@ -31,7 +31,13 @@ module.exports = app => {
         const count = parseInt(result.count)
         
         app.db('hospitals')
-            //.select('id', 'cod_hospital', 'name_hospital')
+            .join('countrys', 'hospitals.id_country', 'countrys.id')
+            .join('states', 'hospitals.id_state', 'states.id')
+            .join('citys', 'hospitals.id_city', 'citys.id')
+            .select('hospitals.id', 'hospitals.name_hospital', 'countrys.name_country',
+            'states.name_state', 'citys.name_city', 'hospitals.latitude', 'hospitals.longitude'
+            )
+            //.orderBy('a.id', 'desc')
             .limit(limit).offset(page * limit - limit)
             .then(hospitals => res.json({ data: hospitals, count, limit }))
             .catch(err => res.status(500).send(err))
