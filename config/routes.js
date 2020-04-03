@@ -28,12 +28,6 @@ module.exports = app => {
         //.all(app.config.passport.authenticate())
         .get(app.api.state.get)
 
-    app.route('/bed')
-        .get(app.api.bed.get)
-        .put(app.api.bed.save)
-        
-    app.route('/bed/:id')
-        .get(app.api.bed.getById)
         
     app.route('/city')
         .get(app.api.city.get)
@@ -43,7 +37,15 @@ module.exports = app => {
     
     app.route('/hospital')
         .get(app.api.hospital.get)
-    // app.route('/stats')
+
+        app.route('/bed')
+        .get(app.api.bed.get)
+        .put(app.api.bed.save)
+        
+    app.route('/bed/:id')
+        .get(app.api.bed.getById)
+
+        // app.route('/stats')
     //     .all(app.config.passport.authenticate())
     //     .get(app.api.stat.get)
 
