@@ -1,0 +1,13 @@
+version: '3'
+services:
+  bed_dev:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=bedsystem
+      - MYSQL_DATABASE=bedsystem
+      - MYSQL_USER=bedsystem
+      - MYSQL_PASSWORD=bedsystem
+    expose:
+      - '3306'
+    ports:
+      - '3306:3306'
