@@ -1,5 +1,8 @@
 
+![Node.js CI](https://github.com/johnnyvaz1/BedSystem/workflows/Node.js%20CI/badge.svg)
+
 # Bed System
+
 
 Voltado para responsáveis pela administração pública e orgãos de saúde o BedSystem  
 é um software para o gerenciamento de leitos em vários hospitais
