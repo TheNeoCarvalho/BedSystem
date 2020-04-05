@@ -2,26 +2,25 @@ module.exports = app => {
     const { existsOrError, isNumber } = app.api.validation
     
     const setocuppation = (req, res) => {
-        const livre = 0
-        const ocupado = 1 
-        const reservado = 2
-        const bedhistory = { ...req.body}
+        // const livre = 0
+        // const ocupado = 1 
+        // const reservado = 2
+        const bed = { ...req.body}
         if(req.params.id) bed.id = req.params.id
         if(req.params.type) bed.type = req.params.type
-        const idbedhistory = app.db('bedhistorys')
-            .where({id_bed: bed.id })
-            .then(_ => res.send())
+        // const idbedhistory = app.db('bedhistorys')
+        //     .where({id_bed: bed.id })
+        //     .then(_ => res.send())
 
-            console.log("setocuppation -> idbedhistory", idbedhistory)
-        if (bed.type == 0){ // se livre então verificar 
-            if (!!idbedhistory) {
-                app.db('bedhistorys')
-                .insert(bedhistory)
-                .where({id_bed: bed.id })
+            app.db('bedhistorys')
+                .insert({
+                    id_bed: bed.id,
+                    id_patient: bed.id_patient,
+                    occupation: bed.type
+                })
+                .then(_ => res.status(204).send())
+                .catch(err => res.status(500).send(err))
             }
-        }
-
-    }
 
     const save = (req, res) => {
         const bed = { ...req.body }

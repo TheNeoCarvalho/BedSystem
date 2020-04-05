@@ -4,7 +4,7 @@ exports.up = function(knex, Promise) {
         table.increments('id').primary()
         table.uuid('id_bed')
         table.string('id_patient',50)
-        table.integer('occupation',1).defaultTo(0).notNull()
+        table.integer('occupation',1).notNull()
         table.timestamps()
     })
 };

@@ -36,7 +36,8 @@ module.exports = app => {
         .get(app.api.city.getById)  // TODO: alterar para cod_city
     
     app.route('/hospital')
-        .get(app.api.hospital.get)
+    .all(app.config.passport.authenticate())    
+    .get(app.api.hospital.get)
 
         app.route('/bed')
         .get(app.api.bed.get)
@@ -45,7 +46,7 @@ module.exports = app => {
     app.route('/bed/:id')
         .get(app.api.bed.getById)
 
-    app.route('/bed/alteroccupation/:id/:tipo')
+    app.route('/bed/alteroccupation/:id/:type')
         .get(app.api.bed.setocuppation)
 
     
