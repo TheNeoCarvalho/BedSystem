@@ -34,8 +34,8 @@ module.exports = app => {
             .join('countrys', 'hospitals.id_country', 'countrys.id')
             .join('states', 'hospitals.id_state', 'states.id')
             .join('citys', 'hospitals.id_city', 'citys.id')
-            .select('hospitals.id', 'hospitals.name_hospital', 'countrys.name_country',
-            'states.name_state', 'citys.name_city', 'hospitals.latitude', 'hospitals.longitude'
+            .select('hospitals.id', 'hospitals.name_hospital as hospital', 'countrys.name_country as country',
+            'states.name_state as state', 'citys.name_city as city', 'hospitals.latitude', 'hospitals.longitude'
             )
             //.orderBy('a.id', 'desc')
             .limit(limit).offset(page * limit - limit)

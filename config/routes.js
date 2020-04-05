@@ -45,7 +45,7 @@ module.exports = app => {
     app.route('/bed/:id')
         .get(app.api.bed.getById)
 
-    app.route('/bed/alteroccupation')
+    app.route('/bed/alteroccupation/:id/:tipo')
         .get(app.api.bed.setocuppation)
 
     
