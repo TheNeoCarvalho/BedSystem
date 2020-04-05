@@ -45,6 +45,10 @@ module.exports = app => {
     app.route('/bed/:id')
         .get(app.api.bed.getById)
 
+    app.route('/bed/alteroccupation')
+        .get(app.api.bed.setocuppation)
+
+    
         // app.route('/stats')
     //     .all(app.config.passport.authenticate())
     //     .get(app.api.stat.get)
