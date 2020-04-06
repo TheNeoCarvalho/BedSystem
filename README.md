@@ -35,8 +35,8 @@ no caso o BedSystem possui uma visão geral dos leitos
 Grafana: 
  * http://54.209.248.173:3000/d/WfiPUWjWz/hospitais?orgId=1
  
- usuario: gerente  
- senha:hackforlife2020
+ usuario: admin
+ senha: bedsystem2020
 
 # Protótipo do APP
 ![APP](/docs/prototipo.png)
