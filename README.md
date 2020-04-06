@@ -2,17 +2,14 @@
 ![Node.js CI](https://github.com/johnnyvaz1/BedSystem/workflows/Node.js%20CI/badge.svg)
 
 # Bed System
-![Tela Inicial](/docs/logo2.png)
+![Logo](/docs/logo2.png)
 
 Voltado para responsáveis pela administração pública e orgãos de saúde o BedSystem  
 é um software para o gerenciamento de leitos em vários hospitais
 que usando etiquetas com QR Code mantém as informações atualizadas em tempo real
-diferentemente dos sistemas dos próprios internos de hospitais que não compartilham a informação, o BedSystem possui uma visão geral da cidade
+diferentemente dos sistemas dos próprios hospitais que não compartilham a informação,
+no caso o BedSystem possui uma visão geral dos leitos
 
-Aimed at BedSystem public administration and health agencies
-is software to manage beds in various hospitals
-using QR Code tags keeps information updated in real time
-unlike hospital internal systems that do not share information, BedSystem has an overview of the city
 
 # Problemas sendo resolvidos pelo sistema
  __Carlos Algarte (responsável pelo TI da Secretaria de Saúde de Franca)__
@@ -24,7 +21,25 @@ unlike hospital internal systems that do not share information, BedSystem has an
  * A integração de sistemas é um obstáculo uma vez que cada Hospital / Prefeitura tem um sistema diferente;
  * Um leito de UTI fica ocupado em média de 10 a 14 dias;
 
- 
+ # links
+ ## API
+  * Listagem de Hospitais:
+ http://54.209.248.173:21200/hospital
+  * Listagem de Leitos
+ http://54.209.248.173:21200/bed
+
+
+# Dashboard
+
+
+
+# Imagens
+
+![Camas Disponiveis](/docs/camas-disponiveis.png)
+
+# Vídeo
+
+
 --------
  __O QUE É ?__
 
