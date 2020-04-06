@@ -1,16 +1,16 @@
 
 exports.up = function(knex, Promise) {
-    return knex.schema.alterTable('pessoas', table => {
-        table.integer('cod_mun',7).unsigned()
-        table.foreign('cod_mun').references('municipios.id')
-        table.integer('idTelefone').unsigned()
-        table.foreign('idTelefone').references('telefones.id')
+    return knex.schema.alterTable('bedhistorys', table => {
+        table.uuid('id_bed')
+        .references('id').inTable('beds.id').notNull()
     })
 };
 
 exports.down = function(knex, Promise) {
-    return knex.schema.alterTable('pessoas', table => {
-        table.dropColumn('cod_mun')
-        table.dropColumn('idTelefone')
-    })
+    return knex.schema.raw("SET sql_mode='TRADITIONAL'")
+  .table('bedhistorys', function (table) {
+    table.dropColumn('id_bed')
+  })
 };
+//GRANT ALL PRIVILEGES ON bedsystem.* TO 'bedsystem'@'localhost';
+//grant all privileges on mydb.* to myuser@'xxx.xxx.xxx.xxx' identified by 'mypassword';

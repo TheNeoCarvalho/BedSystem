@@ -46,9 +46,18 @@ module.exports = app => {
                 .catch(err => res.status(500).send(err))
         }
     }
-
+    // .join('countrys', 'hospitals.id_country', 'countrys.id')
+    // .join('states', 'hospitals.id_state', 'states.id')
+    // .join('citys', 'hospitals.id_city', 'citys.id')
+    // .select('hospitals.id', 'hospitals.name_hospital as hospital', 'countrys.name_country as country',
+    // 'states.name_state as state', 'citys.name_city as city', 'hospitals.latitude', 'hospitals.longitude'
     const get = (req, res) => {
         app.db('beds')
+            .leftJoin('bedhistorys', 'bedhistorys.id_bed', 'beds.id')
+            .join('hospitals', 'hospitals.id', 'beds.id_hospital')
+            .select('beds.id', 'hospitals.name_hospital as hospital','beds.floor',
+            'beds.livingroom', 'beds.allah', 'beds.bed', 'beds.isolation', 'bedhistorys.occupation',  
+            ).orderBy('bedhistorys.id', 'desc')
             .then(bed => res.json(bed))
             .catch(err => res.status(500).send(err))
     }

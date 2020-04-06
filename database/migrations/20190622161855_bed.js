@@ -7,7 +7,7 @@ exports.up = function(knex, Promise) {
         table.string('livingroom',20).notNull() // sala
         table.string('allah',50).notNull() // ala
         table.integer('bed').notNull() // leito
-        table.integer('isolation').defaultTo(0)
+        table.integer('isolation')
         table.timestamps()
     })
     // .then(() => knex.raw(`
