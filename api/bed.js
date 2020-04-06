@@ -56,7 +56,8 @@ module.exports = app => {
         .leftJoin('bedhistorys', 'bedhistorys.id_bed', 'beds.id')
         .join('hospitals', 'hospitals.id', 'beds.id_hospital')
         .select('beds.id', 'hospitals.name_hospital as hospital','beds.floor',
-        'beds.livingroom', 'beds.allah', 'beds.bed', 'beds.isolation', 'bedhistorys.occupation',  
+        'beds.livingroom', 'beds.allah', 'beds.bed', 'beds.isolation', 'bedhistorys.occupation',
+        'bedhistorys.age', 'bedhistorys.id_patient'
         ).orderBy('bedhistorys.id', 'desc')
         .then(bed => res.json(bed))
         .catch(err => res.status(500).send(err))

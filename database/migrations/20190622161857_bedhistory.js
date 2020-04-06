@@ -3,6 +3,7 @@ exports.up = function(knex, Promise) {
     return knex.schema.createTable('bedhistorys', table => {
         table.increments('id').primary()
         table.string('id_patient',50)
+        table.integer('age')
         table.integer('occupation',1).notNull()
         table.timestamps()
         table.uuid('id_bed')
