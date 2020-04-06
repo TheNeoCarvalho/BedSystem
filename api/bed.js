@@ -18,7 +18,7 @@ module.exports = app => {
             id_patient: bed.id_patient,
             occupation: bed.type
         })
-        .then(_ => res.status(204).send())
+        .then(_ => res.status(200).send())
         .catch(err => res.status(500).send(err))
     }
     
