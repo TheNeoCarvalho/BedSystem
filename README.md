@@ -10,6 +10,8 @@ que usando etiquetas com QR Code mantém as informações atualizadas em tempo r
 diferentemente dos sistemas dos próprios hospitais que não compartilham a informação,
 no caso o BedSystem possui uma visão geral dos leitos
 
+# Mapa Mental
+![Mapa Mental](/docs/Gestao-de-Leitos.png)
 
 # Problemas sendo resolvidos pelo sistema
  __Carlos Algarte (responsável pelo TI da Secretaria de Saúde de Franca)__
@@ -30,7 +32,11 @@ no caso o BedSystem possui uma visão geral dos leitos
 
 
 # Dashboard
-
+Grafana: 
+ * http://54.209.248.173:3000/d/WfiPUWjWz/hospitais?orgId=1
+ 
+ usuario: gerente  
+ senha:hackforlife2020
 
 
 # Imagens
@@ -67,3 +73,10 @@ Configure o arquivo .env
   npm run migrate
   
   npm start
+
+
+# Créditos
+
+https://github.com/crypnet
+
+https://github.com/johnnyvaz1
