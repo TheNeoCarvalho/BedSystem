@@ -38,6 +38,9 @@ Grafana:
  usuario: gerente  
  senha:hackforlife2020
 
+# Protótipo do APP
+![APP](/docs/prototipo.png)
+
 
 # Imagens
 
