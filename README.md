@@ -40,7 +40,7 @@ Grafana:
 
 # Protótipo do APP
 ![APP](/docs/prototipo.png)
-
+![QR Code](/docs/qrcode2.png)
 
 # Imagens
 
