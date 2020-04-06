@@ -42,13 +42,15 @@ no caso o BedSystem possui uma visão geral dos leitos
    2 = Reservado
   
   * link + uuid + status
-  http://54.209.248.173:21200/bed/alteroccupation/04e6cc85-57e5-403c-9efc-e9a3592bee47/0
+  
+   http://54.209.248.173:21200/bed/alteroccupation/04e6cc85-57e5-403c-9efc-e9a3592bee47/0
 
 # Dashboard
-Grafana: 
+ Grafana: 
  * http://54.209.248.173:3000/d/WfiPUWjWz/hospitais?orgId=1
  
  usuario: admin
+ 
  senha: bedsystem2020
 
 # Protótipo do APP
