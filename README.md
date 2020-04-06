@@ -43,8 +43,9 @@ Grafana:
 
 ![Camas Disponiveis](/docs/camas-disponiveis.png)
 
-# Vídeo
+# Vídeo Pitch
 
+https://youtu.be/BvsnxWF4paM
 
 --------
  __O QUE É ?__
