@@ -77,6 +77,5 @@ Configure o arquivo .env
 
 # Créditos
 
-https://github.com/crypnet
-
-https://github.com/johnnyvaz1
+* [Johnny Vaz](https://github.com/johnnyvaz1)
+* [André Luis](https://github.com/crypnet)
