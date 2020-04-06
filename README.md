@@ -26,17 +26,32 @@ no caso o BedSystem possui uma visão geral dos leitos
  # links
  ## API
   * Listagem de Hospitais:
- http://54.209.248.173:21200/hospital
+  http://54.209.248.173:21200/hospital
   * Listagem de Leitos
- http://54.209.248.173:21200/bed
-
+  http://54.209.248.173:21200/bed
+  * Listagem de Estados
+  http://54.209.248.173:21200/state
+  * Listagem de País
+  http://54.209.248.173:21200/country
+  * Listagem de Municípios
+  http://54.209.248.173:21200/city
+  
+  API para alteração de Status do Leito: 
+   0 = Livre
+   1 = Ocupado
+   2 = Reservado
+  
+  * link + uuid + status
+  
+   http://54.209.248.173:21200/bed/alteroccupation/04e6cc85-57e5-403c-9efc-e9a3592bee47/0
 
 # Dashboard
-Grafana: 
+ Grafana: 
  * http://54.209.248.173:3000/d/WfiPUWjWz/hospitais?orgId=1
  
- usuario: gerente  
- senha:hackforlife2020
+ usuario: admin
+ 
+ senha: bedsystem2020
 
 # Protótipo do APP
 ![APP](/docs/prototipo.png)
