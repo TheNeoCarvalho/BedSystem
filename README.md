@@ -48,10 +48,8 @@ no caso o BedSystem possui uma visão geral dos leitos
 # Dashboard
  Grafana: 
  * http://54.209.248.173:3000/d/WfiPUWjWz/hospitais?orgId=1
- 
- usuario: admin
- 
- senha: bedsystem2020
+ Acesso Restrito
+
 
 # Protótipo do APP
 ![APP](/docs/prototipo.png)
