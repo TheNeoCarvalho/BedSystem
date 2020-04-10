@@ -5,6 +5,7 @@ exports.up = function(knex, Promise) {
         table.uuid('id_bed')
         table.enum('name_equipment',['Eletrocardiógrafo', 'Oxímetro', 'Monitor multiparamétrico', 'Ventilador pulmonar', 'Estativa'])
         table.string('description')
+        table.uuid('id_bed').references('id').inTable('beds').notNull()
         table.timestamps()
     })
 };

@@ -8,6 +8,9 @@ exports.up = function(knex, Promise) {
         table.integer('id_city')
         table.string('latitude',12).defaultTo(0)
         table.string('longitude',12).defaultTo(0)
+        table.foreign('id_country').references('id').inTable('countrys').notNull()
+        table.foreign('id_state').references('id').inTable('states').notNull()
+        table.foreign('id_city').references('id').inTable('citys').notNull()
         table.timestamps(true,true)
     })
 };
