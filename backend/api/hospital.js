@@ -45,11 +45,18 @@ module.exports = app => {
 
     const getById = (req, res) => {
         app.db('hospitals')
-            //.select('id', 'cod_hospital', 'name_hospital')
-            .where({ id: req.params.id })
-            .first()
-            .then(hospital => res.json(hospital))
-            .catch(err => res.status(500).send(err))
+        .join('countrys', 'hospitals.id_country', 'countrys.id')
+        .join('states', 'hospitals.id_state', 'states.id')
+        .join('citys', 'hospitals.id_city', 'citys.id')
+        .select('hospitals.id', 'hospitals.name_hospital as hospital', 'countrys.name_country as country',
+        'states.name_state as state', 'citys.name_city as city', 'hospitals.latitude', 'hospitals.longitude'
+        )
+        .where({ 'hospitals.id': req.params.id })
+        .first()
+        .then(hospital => res.json(hospital))
+        .catch(err => res.status(500).send(err))
+
+
     }
 
 

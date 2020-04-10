@@ -82,17 +82,18 @@ Não será usado pelos hospitais para gestão dos pacientes;
  * Impressão do QR Code
 
 ## Instalação
+# BackEnd
+  * cd backend
+  * npm i
+  * npm i knex -g
+  * Configure o arquivo .env  
+  * npm run migrate
+  * npm start
 
-  npm i
-  
-  npm i knex -g
-  
-Configure o arquivo .env  
-
-  npm run migrate
-  
-  npm start
-
+# FrontEnd
+  * cd frontend
+  * npm i
+  * npm run serve
 
 # Créditos
 

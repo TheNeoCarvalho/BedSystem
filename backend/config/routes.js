@@ -38,6 +38,10 @@ module.exports = app => {
     app.route('/hospital')
         //.all(app.config.passport.authenticate())    
         .get(app.api.hospital.get)
+    
+    app.route('/hospital/:id')
+        //.all(app.config.passport.authenticate())    
+        .get(app.api.hospital.getById)
 
         app.route('/bed')
         .get(app.api.bed.get)
